@@ -196,7 +196,7 @@ function CountryFacts({ country }) {
         {name.nativeName.ita?.official}
       </p>
       <p>
-        <strong>Languages Spoken</strong>:
+        <strong>Languages Spoken</strong>: {languages?.eng}
       </p>
       <p>
         <strong>Land size</strong>:{" "}
