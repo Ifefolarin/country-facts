@@ -21,7 +21,6 @@ export default function App() {
           const data = await res.json();
           if (data.Response === "False") throw new Error("Country not Found");
 
-          console.log(data);
           setCountries(data);
           setError("");
         } catch (err) {
