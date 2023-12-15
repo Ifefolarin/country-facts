@@ -181,6 +181,7 @@ function CountryFacts({ country }) {
   const {
     name,
     languages,
+    currencies,
     continents,
     borders,
     population,
@@ -196,7 +197,16 @@ function CountryFacts({ country }) {
         {name.nativeName.ita?.official}
       </p>
       <p>
-        <strong>Languages Spoken</strong>: {languages?.eng}
+        <strong>Languages Spoken</strong>:{" "}
+        {Object.values(languages).slice("").join(", ")}
+      </p>
+      <p>
+        <strong>Currency</strong>:{" "}
+        {Object.keys(currencies).map((currency) => (
+          <span key={currency}>
+            {currencies[currency].name} ({currencies[currency].symbol})
+          </span>
+        ))}
       </p>
       <p>
         <strong>Land size</strong>:{" "}
