@@ -208,10 +208,6 @@ function CountryFacts({ country }) {
         ))}
       </p>
       <p>
-        <strong>Land size</strong>:{" "}
-        {area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ", ")}km
-      </p>
-      <p>
         <strong>Other Names</strong>: {altSpellings.slice("").join(", ")}
       </p>
       <p>
